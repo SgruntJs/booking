@@ -1,0 +1,23 @@
+.change-container {
+  &-suggested {
+    display: flex;
+    flex-direction: column;
+    .change-suggested-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      cursor: pointer;
+      gap: 10px;
+      .suggested-item {
+        flex: 1 0 21%;
+        padding: 12px;
+        flex-basis: 21%;
+        width: 25%;
+        max-width: 25%;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.06);
+        }
+      }
+    }
+  }
+}

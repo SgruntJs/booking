@@ -1,5 +1,6 @@
 export interface Change {
-    id?: string;
+    id: string;
     value: string;
     code: string;
+    isSuggested?: boolean;
 }
