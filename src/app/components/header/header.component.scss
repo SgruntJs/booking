@@ -1,0 +1,13 @@
+@import "../../../assets/common/styles.scss";
+
+.header {
+    background-color: $blue;
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        .header-logo {
+            margin-left: 11px;
+        }
+    }
+}
