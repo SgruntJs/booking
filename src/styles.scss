@@ -1,10 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 1110px;
-    margin: 0 auto;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.btn {
+  &-transparent {
+    button {
+      background-color: transparent !important;
+      border: none;
+    }
+  }
+}
+
+button {
+  outline: 0;
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
+}
+
+.black-tooltip.p-tooltip {
+  .p-tooltip-text {
+    background-color: black;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: calc(100% - 5px);
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent  transparent black transparent;
+      }
+  }
+
+  
 }
