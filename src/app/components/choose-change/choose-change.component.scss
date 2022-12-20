@@ -2,6 +2,10 @@
   &-suggested {
     display: flex;
     flex-direction: column;
+    h4 {
+      margin-left: 12px;
+      margin-bottom: 12px;
+    }
     .change-suggested-list {
       display: flex;
       flex-direction: row;

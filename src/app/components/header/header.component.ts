@@ -21,7 +21,7 @@ export class HeaderComponent {
   show() {
     this.ref = this.dialogService.open(ChooseChangeComponent, {
       header: 'Seleziona la valuta',
-      width: '70%',
+      width: '960px',
       contentStyle: { 'max-height': '500px', overflow: 'auto' },
       baseZIndex: 10000,
     });
