@@ -1,0 +1,8 @@
+@import "../../../assets/common/styles.scss";
+nav {
+    background-color:$blue;
+    color: $white;
+    ul {
+        list-style-type: none;
+    }
+}

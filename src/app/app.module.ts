@@ -11,13 +11,17 @@ import {TooltipModule} from 'primeng/tooltip';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { ChooseLanguageComponent } from './components/choose-language/choose-language.component';
 import { ChooseChangeComponent } from './components/choose-change/choose-change.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ChooseLanguageComponent,
-    ChooseChangeComponent
+    ChooseChangeComponent,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
