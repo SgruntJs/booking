@@ -1,0 +1,18 @@
+@import "../../../assets/common/styles.scss";
+.hero-wrapper {
+    background-color: $blue;
+    color: $white;
+    .hero-container {
+        min-height: 240px;
+        padding-top: 64px;
+        h1 {
+            font-size: 48px;
+            line-height: 62px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+    }
+}
