@@ -1,0 +1,45 @@
+@import "../../../assets/common/styles.scss";
+.search-form {
+  position: relative;
+  margin: 24px 0 16px;
+  width: 100%;
+  .search-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 52px;
+    background-color: $yellow;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+      padding: 4px;
+      gap: 2px;
+    }
+    input {
+      height: 100%;
+      border:none;
+    }
+    .search-input {
+        input {
+            background-image: url('/assets/images/accomodation.svg');
+            padding-left: 50px;
+            background-repeat: no-repeat;
+            background-position: 16px center;
+        }
+    }
+    .btn {
+      height: 100%;
+      cursor: pointer;
+      &.btn-search {
+        background-color: $ctaBlue;
+        border-radius: 2px;
+        font-size: 20px;
+        color: $white;
+        white-space: nowrap;
+        padding: 5px 32px;
+        &:hover {
+            background-color: $ctaBlueHover;
+        }
+      }
+    }
+  }
+}

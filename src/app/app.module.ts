@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import {ReactiveFormsModule} from "@angular/forms"; 
 
 import {ButtonModule} from 'primeng/button';
 import {TooltipModule} from 'primeng/tooltip';
@@ -14,6 +15,7 @@ import { ChooseChangeComponent } from './components/choose-change/choose-change.
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HeroComponent } from './components/hero/hero.component';
     ChooseChangeComponent,
     NavComponent,
     HomeComponent,
-    HeroComponent
+    HeroComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { HeroComponent } from './components/hero/hero.component';
     ButtonModule,
     TooltipModule,
     DynamicDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
