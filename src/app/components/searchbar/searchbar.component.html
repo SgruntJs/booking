@@ -5,7 +5,9 @@
             <div class="search-input">
                 <input type="text" formControlName="where" placeholder="Dove vuoi andare?">
             </div>
-            <div class="search-calendar"></div>
+            <div class="search-calendar">
+                <p-calendar formControlName="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
+            </div>
             <div class="search-people"></div>
             <div class="search-button">
                 <button class="btn btn-search">Cerca</button>

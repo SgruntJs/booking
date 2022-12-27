@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {ButtonModule} from 'primeng/button';
 import {TooltipModule} from 'primeng/tooltip';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import {CalendarModule} from 'primeng/calendar';
 import { ChooseLanguageComponent } from './components/choose-language/choose-language.component';
 import { ChooseChangeComponent } from './components/choose-change/choose-change.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -35,7 +36,8 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     TooltipModule,
     DynamicDialogModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
