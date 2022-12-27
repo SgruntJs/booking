@@ -3,6 +3,10 @@ nav {
     background-color:$blue;
     color: $white;
     padding: 8px 16px 12px;
+    overflow-x: auto;
+    @include respond-to(desktop) {
+        overflow: hidden;
+    }
     ul.nav-list {
         list-style-type: none;
         display: flex;
@@ -13,6 +17,7 @@ nav {
             margin-left: 8px;
             display: flex;
             gap: 3px;
+            white-space: nowrap;// per fare stare le parole su una linea
             &:hover {
                 background-color: rgba(255, 255, 255, .2);          
                 border-radius: 999px;

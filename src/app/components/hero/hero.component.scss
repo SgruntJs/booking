@@ -1,7 +1,11 @@
 @import "../../../assets/common/styles.scss";
 .hero-wrapper {
-    background-color: $blue;
+    background-color:$lightBgGrey;
     color: $white;
+
+    @include respond-to(desktop) {
+        background-color:$blue;
+    }
     .hero-container {
         min-height: 240px;
         padding-top: 64px;
