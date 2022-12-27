@@ -2,7 +2,25 @@
 nav {
     background-color:$blue;
     color: $white;
-    ul {
+    padding: 8px 16px 12px;
+    ul.nav-list {
         list-style-type: none;
+        display: flex;
+        gap: 5px;
+        li {
+            cursor: pointer;
+            padding: 11px 15px;
+            margin-left: 8px;
+            display: flex;
+            gap: 3px;
+            &:hover {
+                background-color: rgba(255, 255, 255, .2);          
+                border-radius: 999px;
+            }
+            &.active {
+                background-color: rgba(255, 255, 255, .2);          
+                border-radius: 999px;
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ import { ChooseLanguageComponent } from './components/choose-language/choose-lan
 import { ChooseChangeComponent } from './components/choose-change/choose-change.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './pages/home/home.component';
     ChooseLanguageComponent,
     ChooseChangeComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
