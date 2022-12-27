@@ -35,3 +35,13 @@ $breakpoints: (
           + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+.container {
+  padding: 24px 16px 16px;
+  max-width: 100%;
+  @include respond-to(desktop) {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
