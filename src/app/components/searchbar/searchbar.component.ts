@@ -10,12 +10,24 @@ export class SearchbarComponent {
   rangeDates!: Date[];
   minDate!: Date;
   searchForm!: FormGroup;
+  show = false;
 
   ngOnInit() {
     this.minDate = new Date();
     this.searchForm = new FormGroup({
       where: new FormControl('', [Validators.required]),
       rangeDates: new FormControl('', [Validators.required]),
+      adults: new FormControl('', [Validators.required]),
+      children: new FormControl('', [Validators.required]),
+      rooms: new FormControl('', [Validators.required])
     });
+  }
+
+  onSubmit() {
+    console.log('search', this.searchForm.value)
+  }
+
+  showGuestBox() {
+    this.show = !this.show;
   }
 }

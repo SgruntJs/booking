@@ -1,6 +1,6 @@
 <div class="search-form">
   <div class="container">
-    <form [formGroup]="searchForm">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
       <div class="search-form-wrapper">
         <div class="search-input">
           <input
@@ -35,7 +35,23 @@
           ></p-calendar>
         </div>
         <div class="search-people">
-          <input type="text" />
+          <div class="label" (click)="showGuestBox()">
+            2 adulti &bull; 2 bambini &bull; 1 camera
+          </div>
+          <div class="guest-box" *ngIf="show">
+            <div class="guest-box-row">
+              <label for="">Adulti</label>
+              <input type="text" formControlName="adults" class="hidden" />
+            </div>
+            <div class="guest-box-row">
+              <label for="">Bambini</label>
+              <input type="text" formControlName="children" class="hidden" />
+            </div>
+            <div class="guest-box-row">
+                <label for="">Camere</label>
+                <input type="text" formControlName="rooms" class="hidden" />
+              </div>
+          </div>
         </div>
         <div class="search-button">
           <button class="btn btn-search">Cerca</button>

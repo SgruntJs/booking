@@ -3,6 +3,9 @@
   position: relative;
   margin: 24px 0 16px;
   width: 100%;
+  @include respond-to(desktop) {
+    top: -50px;
+  }
 
   .search-form-wrapper {
     display: flex;
@@ -31,6 +34,9 @@
         padding-left: 50px;
         background-repeat: no-repeat;
         background-position: 16px center;
+        &:hover {
+          box-shadow: 0 0 0 1px #d59c00 inset;
+        }
       }
       input::placeholder {
         color: $darkText;
@@ -46,12 +52,40 @@
         top: 13px;
         width: 50px;
       }
+      &:hover {
+        box-shadow: 0 0 0 1px #d59c00 inset;
+      }
       // style in general css
     }
     .search-people {
       min-width: 25%;
-      input {
+      background-color: $white;
+      position: relative;
+      &:hover {
+        box-shadow: 0 0 0 1px #d59c00 inset;
+      }
+      .label {
         width: 100%;
+        font-size: 14px;
+        background-image: url("/assets/images/people.svg");
+        padding-left: 50px;
+        background-repeat: no-repeat;
+        background-position: 16px center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .guest-box {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 370px;
+        background-color: $white;
+        border-radius: 2px;
+        box-shadow: 0 2px 16px rgb(0 0 0 / 15%);
+        padding: 24px 24px 8px;
+        min-width: 308px;
+        margin-top: 12px;
       }
     }
     .btn {
