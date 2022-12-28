@@ -1,18 +1,46 @@
 <div class="search-form">
-    <div class="container">
+  <div class="container">
     <form [formGroup]="searchForm">
-        <div class="search-form-wrapper">
-            <div class="search-input">
-                <input type="text" formControlName="where" placeholder="Dove vuoi andare?">
-            </div>
-            <div class="search-calendar">
-                <p-calendar formControlName="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
-            </div>
-            <div class="search-people"></div>
-            <div class="search-button">
-                <button class="btn btn-search">Cerca</button>
-            </div>
+      <div class="search-form-wrapper">
+        <div class="search-input">
+          <input
+            type="text"
+            formControlName="where"
+            placeholder="Dove vuoi andare?"
+          />
         </div>
+        <div class="search-calendar">
+          <svg
+            aria-hidden="true"
+            class="bk-icon -experiments-calendar sb-date-picker_icon-svg"
+            fill="#BDBDBD"
+            focusable="false"
+            height="20"
+            role="presentation"
+            width="20"
+            viewBox="0 0 128 128"
+          >
+            <path
+              d="m112 16h-16v-8h-8v8h-48v-8h-8v8h-16c-4.4 0-8 3.9-8 8.7v86.6c0 4.8 3.6 8.7 8 8.7h96c4.4 0 8-3.9 8-8.7v-86.6c0-4.8-3.6-8.7-8-8.7zm0 95.3a1.1 1.1 0 0 1 -.2.7h-95.6a1.1 1.1 0 0 1 -.2-.7v-71.3h96zm-68-43.3h-12v-12h12zm0 28h-12v-12h12zm26-28h-12v-12h12zm0 28h-12v-12h12zm26 0h-12v-12h12zm0-28h-12v-12h12z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+          <p-calendar
+            formControlName="rangeDates"
+            [numberOfMonths]="2"
+            selectionMode="range"
+            [readonlyInput]="true"
+            inputId="range"
+            [minDate]="minDate"
+          ></p-calendar>
+        </div>
+        <div class="search-people">
+          <input type="text" />
+        </div>
+        <div class="search-button">
+          <button class="btn btn-search">Cerca</button>
+        </div>
+      </div>
     </form>
-</div>
+  </div>
 </div>

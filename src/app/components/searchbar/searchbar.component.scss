@@ -3,6 +3,7 @@
   position: relative;
   margin: 24px 0 16px;
   width: 100%;
+
   .search-form-wrapper {
     display: flex;
     flex-direction: column;
@@ -16,20 +17,42 @@
       justify-content: space-between;
     }
     input {
-      height: 100%!important;
-      border:none;
+      height: 100% !important;
+      border: none;
       border-radius: 2px;
+      color: $darkText;
+      font-size: 14px;
     }
     .search-input {
-        input {
-            background-image: url('/assets/images/accomodation.svg');
-            padding-left: 50px;
-            background-repeat: no-repeat;
-            background-position: 16px center;
-        }
+      min-width: 38%;
+      input {
+        width: 100%;
+        background-image: url("/assets/images/accomodation.svg");
+        padding-left: 50px;
+        background-repeat: no-repeat;
+        background-position: 16px center;
+      }
+      input::placeholder {
+        color: $darkText;
+      }
     }
     .search-calendar {
-     // style in general css
+      min-width: 25%;
+      background-color: $white;
+      display: flex;
+      svg {
+        position: relative;
+        left: 0;
+        top: 13px;
+        width: 50px;
+      }
+      // style in general css
+    }
+    .search-people {
+      min-width: 25%;
+      input {
+        width: 100%;
+      }
     }
     .btn {
       height: 100%;
@@ -42,7 +65,7 @@
         white-space: nowrap;
         padding: 5px 32px;
         &:hover {
-            background-color: $ctaBlueHover;
+          background-color: $ctaBlueHover;
         }
       }
     }
