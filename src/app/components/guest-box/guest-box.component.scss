@@ -22,14 +22,24 @@
       flex-direction: column;
       .age-select-wrapper {
         display: flex;
-        gap: 10px;
+        gap: 16px 10px;
         width: 100%;
         flex-wrap: wrap;
+        margin-bottom: 16px;
         .age-select-item {
           width: 47%;
           max-width: 50%;
           select {
             width: 100%;
+            appearance: none;
+            min-width: 135px;
+            border: 1px solid $ctaBlue;
+            border-radius: 2px;
+            padding: 8px 24px 8px 8px;
+            
+            background: $white url("/assets/images/arrows.svg")
+              no-repeat;
+            background-position: right 8px top 50%;
           }
         }
       }
