@@ -11,7 +11,7 @@ export class SearchbarComponent {
   minDate!: Date;
   searchForm!: FormGroup;
   show = false;
-  numberAdults = 0;
+  numberAdults = 2;
   numberChildren = 0;
   numberRooms = 0;
 
@@ -44,7 +44,7 @@ export class SearchbarComponent {
   }
 
   updateRooms(num: number){
-
+    this.numberRooms = num;
   }
 
 }

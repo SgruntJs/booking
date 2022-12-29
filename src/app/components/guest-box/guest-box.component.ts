@@ -8,10 +8,12 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class GuestBoxComponent {
 
-  numberAdults = 0;
+  numberAdults = 2;
   numberChildren = 0;
+  numberRooms = 0;
   @Output() adults = new EventEmitter<number>();
   @Output() children = new EventEmitter<number>();
+  @Output() rooms = new EventEmitter<number>();
 
   counter(action: string) {
     if (action === 'add') {
@@ -28,6 +30,15 @@ export class GuestBoxComponent {
       this.numberChildren === 0 ? false : this.numberChildren--;
     }
     this.children.emit(this.numberChildren);
+  }
+
+  counterRooms(action: string) {
+    if (action === 'add') {
+      this.numberRooms++;
+    } else {
+      this.numberRooms === 0 ? false : this.numberRooms--;
+    }
+    this.rooms.emit(this.numberRooms);
   }
 
 }

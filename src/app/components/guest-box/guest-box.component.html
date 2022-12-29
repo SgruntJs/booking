@@ -23,6 +23,11 @@
     </div>
     <div class="guest-box-row">
       <label for="">Camere</label>
-      
+      <div class="guest-box-counter">
+        
+        <button class="btn btn-counter" (click)="counterRooms('remove')">-</button>
+        <span class="total">{{numberRooms}}</span>
+        <button class="btn btn-counter"  (click)="counterRooms('add')">+</button>
+      </div>
     </div>
   </div>
