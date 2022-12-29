@@ -26,7 +26,15 @@
       </button>
     </div>
   </div>
-  <div class="guest-box-row" *ngIf="numberChildren > 0">
+  <div class="guest-box-row guest-box-row--age" *ngIf="numberChildren > 0">
+    <div class="age-select-wrapper">
+      <div *ngFor="let element of elements" class="age-select-item">
+        <select >
+          <option value="eta">Età obbligatoria</option>
+          <option *ngFor="let age of ages">{{age}}</option>
+        </select>
+      </div>
+    </div>
     <div class="children-age">
       Per trovare un alloggio con spazio per tutti e mostrarti i prezzi esatti,
       dobbiamo conoscere l'età dei bambini al momento del check-out.

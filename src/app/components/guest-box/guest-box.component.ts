@@ -4,16 +4,18 @@ import { Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-guest-box',
   templateUrl: './guest-box.component.html',
-  styleUrls: ['./guest-box.component.scss']
+  styleUrls: ['./guest-box.component.scss'],
 })
 export class GuestBoxComponent {
-
   numberAdults = 2;
   numberChildren = 0;
   numberRooms = 1;
   @Output() adults = new EventEmitter<number>();
   @Output() children = new EventEmitter<number>();
   @Output() rooms = new EventEmitter<number>();
+  elements: Array<any> = [];
+
+  ages = [...Array(18).keys()];
 
   counter(action: string) {
     if (action === 'add') {
@@ -26,10 +28,14 @@ export class GuestBoxComponent {
   counterChildren(action: string) {
     if (action === 'add') {
       this.numberChildren++;
+      this.appendElement();
     } else {
+     
       this.numberChildren === 0 ? false : this.numberChildren--;
+      this.removeElement();
     }
     this.children.emit(this.numberChildren);
+    // potrei avere un array select = [1]
   }
 
   counterRooms(action: string) {
@@ -41,4 +47,11 @@ export class GuestBoxComponent {
     this.rooms.emit(this.numberRooms);
   }
 
+  appendElement(): void {
+    this.elements = [...this.elements, this.elements.length + 1];
+  }
+
+  removeElement(): void {
+    this.elements.pop();
+  }
 }
