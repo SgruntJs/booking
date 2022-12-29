@@ -36,26 +36,14 @@
         </div>
         <div class="search-people">
           <div class="label" (click)="showGuestBox()">
-            2 adulti &bull; 2 bambini &bull; 1 camera
+            <input type="text" formControlName="adults" class="hidden" />
+            <input type="text" formControlName="children" class="hidden" />
+            <input type="text" formControlName="rooms" class="hidden" />
+            {{ numberAdults }} adulti &bull; 2 bambini &bull; 1 camera
           </div>
-          <div class="guest-box" *ngIf="show">
-            <div class="guest-box-row">
-              <label for="">Adulti</label>
-              <input type="text" formControlName="adults" class="hidden" />
-            </div>
-            <div class="guest-box-row">
-              <div class="children-label">
-                <label for="">Bambini</label>
-                <div class="subtitle">0-17 anni</div>
-              </div>
-
-              <input type="text" formControlName="children" class="hidden" />
-            </div>
-            <div class="guest-box-row">
-              <label for="">Camere</label>
-              <input type="text" formControlName="rooms" class="hidden" />
-            </div>
-          </div>
+          <ng-container *ngIf="show">
+            <app-guest-box></app-guest-box>
+          </ng-container>
         </div>
         <div class="search-button">
           <button class="btn btn-search">Cerca</button>

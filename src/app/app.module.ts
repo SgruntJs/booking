@@ -17,6 +17,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { GuestBoxComponent } from './components/guest-box/guest-box.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     NavComponent,
     HomeComponent,
     HeroComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    GuestBoxComponent
   ],
   imports: [
     BrowserModule,

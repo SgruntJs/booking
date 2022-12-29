@@ -75,32 +75,7 @@
         display: flex;
         align-items: center;
       }
-      .guest-box {
-        position: absolute;
-        white-space: nowrap;
-        top: 100%;
-        right: 0;
-        width: 370px;
-        background-color: $white;
-        border-radius: 2px;
-        box-shadow: 0 2px 16px rgb(0 0 0 / 15%);
-        padding: 24px 24px 8px;
-        min-width: 308px;
-        margin-top: 12px;
-        font-size: 14px;
-        &-row {
-          min-height: 40px;
-          display: flex;
-          align-items: center;
-          .children-label {
-            display: flex; 
-            flex-direction: column;
-            .subtitle {
-              color: $darkBlue;
-            }
-          }
-        }
-      }
+
     }
     .btn {
       height: 100%;
