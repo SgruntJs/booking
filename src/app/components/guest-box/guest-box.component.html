@@ -1,33 +1,45 @@
 <div class="guest-box">
-    <div class="guest-box-row">
-      <label for="">Adulti</label>
-      <div class="guest-box-counter">
-       
-        <button type="button" class="btn btn-counter" (click)="counter('remove')">-</button>
-        <span class="total">{{numberAdults}}</span>
-        <button type="button" class="btn btn-counter" (click)="counter('add')">+</button>
-      </div>
-      
-    </div>
-    <div class="guest-box-row">
-      <div class="children-label">
-        <label for="">Bambini</label>
-        <div class="subtitle">0-17 anni</div>
-      </div>
-      <div class="guest-box-counter">
-        
-        <button class="btn btn-counter" (click)="counterChildren('remove')">-</button>
-        <span class="total">{{numberChildren}}</span>
-        <button class="btn btn-counter"  (click)="counterChildren('add')">+</button>
-      </div>
-    </div>
-    <div class="guest-box-row">
-      <label for="">Camere</label>
-      <div class="guest-box-counter">
-        
-        <button class="btn btn-counter" (click)="counterRooms('remove')">-</button>
-        <span class="total">{{numberRooms}}</span>
-        <button class="btn btn-counter"  (click)="counterRooms('add')">+</button>
-      </div>
+  <div class="guest-box-row">
+    <label for="">Adulti</label>
+    <div class="guest-box-counter">
+      <button type="button" class="btn btn-counter" (click)="counter('remove')">
+        -
+      </button>
+      <span class="total">{{ numberAdults }}</span>
+      <button type="button" class="btn btn-counter" (click)="counter('add')">
+        +
+      </button>
     </div>
   </div>
+  <div class="guest-box-row">
+    <div class="children-label">
+      <label for="">Bambini</label>
+      <div class="subtitle">0-17 anni</div>
+    </div>
+    <div class="guest-box-counter">
+      <button class="btn btn-counter" (click)="counterChildren('remove')">
+        -
+      </button>
+      <span class="total">{{ numberChildren }}</span>
+      <button class="btn btn-counter" (click)="counterChildren('add')">
+        +
+      </button>
+    </div>
+  </div>
+  <div class="guest-box-row" *ngIf="numberChildren > 0">
+    <div class="children-age">
+      Per trovare un alloggio con spazio per tutti e mostrarti i prezzi esatti,
+      dobbiamo conoscere l'età dei bambini al momento del check-out.
+    </div>
+  </div>
+  <div class="guest-box-row">
+    <label for="">Camere</label>
+    <div class="guest-box-counter">
+      <button class="btn btn-counter" (click)="counterRooms('remove')">
+        -
+      </button>
+      <span class="total">{{ numberRooms }}</span>
+      <button class="btn btn-counter" (click)="counterRooms('add')">+</button>
+    </div>
+  </div>
+</div>

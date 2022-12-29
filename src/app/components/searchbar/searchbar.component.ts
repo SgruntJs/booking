@@ -13,7 +13,7 @@ export class SearchbarComponent {
   show = false;
   numberAdults = 2;
   numberChildren = 0;
-  numberRooms = 0;
+  numberRooms = 1;
 
   ngOnInit() {
     this.minDate = new Date();
