@@ -12,6 +12,8 @@ export class SearchbarComponent {
   searchForm!: FormGroup;
   show = false;
   numberAdults = 0;
+  numberChildren = 0;
+  numberRooms = 0;
 
   ngOnInit() {
     this.minDate = new Date();
@@ -32,5 +34,17 @@ export class SearchbarComponent {
     this.show = !this.show;
   }
 
+
+  updateAdults(num: number) {
+    this.numberAdults = num;
+  }
+
+  updateChildren(num: number) {
+    this.numberChildren = num;
+  }
+
+  updateRooms(num: number){
+
+  }
 
 }

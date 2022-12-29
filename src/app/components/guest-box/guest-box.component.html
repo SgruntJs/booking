@@ -16,9 +16,9 @@
       </div>
       <div class="guest-box-counter">
         
-        <button class="btn btn-counter">-</button>
-        <span class="total">0</span>
-        <button class="btn btn-counter">+</button>
+        <button class="btn btn-counter" (click)="counterChildren('remove')">-</button>
+        <span class="total">{{numberChildren}}</span>
+        <button class="btn btn-counter"  (click)="counterChildren('add')">+</button>
       </div>
     </div>
     <div class="guest-box-row">

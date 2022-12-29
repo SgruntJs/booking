@@ -39,10 +39,10 @@
             <input type="text" formControlName="adults" class="hidden" />
             <input type="text" formControlName="children" class="hidden" />
             <input type="text" formControlName="rooms" class="hidden" />
-            {{ numberAdults }} adulti &bull; 2 bambini &bull; 1 camera
+            {{ numberAdults }} adulti &bull; {{numberChildren}} bambini &bull; 1 camera
           </div>
           <ng-container *ngIf="show">
-            <app-guest-box></app-guest-box>
+            <app-guest-box (adults)="updateAdults($event)" (children)="updateChildren($event)"></app-guest-box>
           </ng-container>
         </div>
         <div class="search-button">
