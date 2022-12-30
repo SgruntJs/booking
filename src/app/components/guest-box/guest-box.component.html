@@ -30,8 +30,8 @@
     <div class="age-select-wrapper">
       <div *ngFor="let element of elements" class="age-select-item">
         <select >
-          <option value="eta">Età (obbligatoria)</option>
-          <option *ngFor="let age of ages">{{age}}</option>
+          <option value="">Età (obbligatoria)</option>
+          <option *ngFor="let age of ages">{{age}} {{age === 1 ? 'anno': 'anni'}}</option>
         </select>
       </div>
     </div>

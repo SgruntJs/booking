@@ -18,7 +18,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { GuestBoxComponent } from './components/guest-box/guest-box.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { SearchresultsComponent } from './pages/searchresults/searchresults.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { GuestBoxComponent } from './components/guest-box/guest-box.component';
     HomeComponent,
     HeroComponent,
     SearchbarComponent,
-    GuestBoxComponent
+    GuestBoxComponent,
+    SearchresultsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { GuestBoxComponent } from './components/guest-box/guest-box.component';
     DynamicDialogModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    CalendarModule
+    CalendarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

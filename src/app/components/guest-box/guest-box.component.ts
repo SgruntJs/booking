@@ -35,7 +35,6 @@ export class GuestBoxComponent {
       this.removeElement();
     }
     this.children.emit(this.numberChildren);
-    // potrei avere un array select = [1]
   }
 
   counterRooms(action: string) {

@@ -21,7 +21,7 @@ export class SearchbarComponent {
       where: new FormControl('', [Validators.required]),
       rangeDates: new FormControl('', [Validators.required]),
       adults: new FormControl('', [Validators.required]),
-      children: new FormControl('', [Validators.required]),
+      children: new FormControl('', []),
       rooms: new FormControl('', [Validators.required]),
     });
   }

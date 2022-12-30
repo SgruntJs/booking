@@ -36,9 +36,9 @@
         </div>
         <div class="search-people">
           <div class="label" (click)="showGuestBox()">
-            <input type="text" formControlName="adults" class="hidden" />
-            <input type="text" formControlName="children" class="hidden" />
-            <input type="text" formControlName="rooms" class="hidden" />
+            <input type="text" formControlName="adults" class="hidden" [(ngModel)]="numberAdults"/>
+            <input type="text" formControlName="children" class="hidden" [(ngModel)]="numberChildren"/>
+            <input type="text" formControlName="rooms" class="hidden" [(ngModel)]="numberRooms"/>
             {{ numberAdults }}
             {{ numberAdults === 1 ? "adulto" : "adulti" }} &bull;
             {{ numberChildren }}
@@ -56,7 +56,7 @@
           </ng-container>
         </div>
         <div class="search-button">
-          <button class="btn btn-search">Cerca</button>
+          <button class="btn btn-search" [disabled]="!searchForm.valid">Cerca</button>
         </div>
       </div>
     </form>
