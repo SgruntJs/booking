@@ -46,3 +46,18 @@ $breakpoints: (
     padding: 0;
   }
 }
+
+.btn {
+  height: 100%;
+  cursor: pointer;
+  &.btn-blue {
+    background-color: $ctaBlue;
+    border-radius: 2px;
+    color: $white;
+    white-space: nowrap;
+    padding: 5px 32px;
+    &:hover {
+      background-color: $ctaBlueHover;
+    }
+  }
+}
