@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-searchbar',
@@ -16,7 +16,7 @@ export class SearchbarComponent {
   numberChildren = 0;
   numberRooms = 1;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.minDate = new Date();
@@ -32,7 +32,8 @@ export class SearchbarComponent {
   onSubmit() {
     console.log('search', this.searchForm.value);
     const where = this.searchForm.value.where;
-    this.router.navigate(['/searchresults', where, 2]);
+    const guest = this.searchForm.value.adults;
+    this.router.navigateByUrl(`/searchresults?where=${where}&guests=${guest}`);
   }
 
   showGuestBox() {

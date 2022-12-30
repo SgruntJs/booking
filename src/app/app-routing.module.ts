@@ -7,21 +7,15 @@ const routes: Routes = [
   {
     path:'',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path:'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'searchresults',
     component: SearchresultsComponent,
-    children: [
-      {
-           path: ':id/:guests',
-           component: SearchresultsComponent
-      }
-    ]
   }
 ];
 

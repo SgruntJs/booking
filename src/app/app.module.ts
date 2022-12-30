@@ -20,6 +20,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { GuestBoxComponent } from './components/guest-box/guest-box.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchresultsComponent } from './pages/searchresults/searchresults.component';
+import { HotelListComponent } from './components/hotel-list/hotel-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { SearchresultsComponent } from './pages/searchresults/searchresults.comp
     HeroComponent,
     SearchbarComponent,
     GuestBoxComponent,
-    SearchresultsComponent
+    SearchresultsComponent,
+    HotelListComponent
   ],
   imports: [
     BrowserModule,
