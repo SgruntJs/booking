@@ -15,7 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'searchresults',
-    component: SearchresultsComponent
+    component: SearchresultsComponent,
+    children: [
+      {
+           path: ':id/:guests',
+           component: SearchresultsComponent
+      }
+    ]
   }
 ];
 
