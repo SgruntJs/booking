@@ -23,17 +23,21 @@ export class SearchresultsComponent implements OnInit {
 
   ngOnInit() {
     this.where = this.route.snapshot.queryParamMap.get('where')!;
-    this.guests = +this.route.snapshot.queryParamMap.get('guest')!;
+    this.guests = +this.route.snapshot.queryParamMap.get('guests')!;
+    console.log('geust', this.guests);
     // this.route.queryParamMap.subscribe((data) => {
     //   console.log('data', data);
     // });
+    this.hotelsSrv.getAllHotels().subscribe( (res) => {
+      console.log('all res', res);
+    });
     this.getSearchList();
   }
 
   getSearchList() {
     this.hotels$ = this.hotelsSrv.getAllHotels().pipe(
       switchMap((res) => res),
-      filter((item: any) => item.city === this.where),
+      filter( (item) => (item.city === this.where) &&  (item.guests === this.guests)),
       toArray()
     );
     this.hotels$.subscribe((res) => {

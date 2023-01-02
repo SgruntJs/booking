@@ -1,11 +1,14 @@
 export interface Hotel {
     id: string;
+    guests: number;
     type: string;
-    name: string;created: Date;
+    name: string;
+    created: Date;
     modified: Date;
     address: string;
     airportCode: string;
-    city: string;confidenceRating: number;
+    city: string;
+    confidenceRating: number;
     countryCode: string;
     deepLink: string;
     highRate: number;
