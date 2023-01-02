@@ -10,14 +10,16 @@
   .search-form-wrapper {
     display: flex;
     flex-direction: column;
-    height: 52px;
+    height: auto;
     background-color: $yellow;
-
+    padding: 4px;
+    gap: 4px;
     @include respond-to(desktop) {
       flex-direction: row;
       padding: 4px;
       gap: 2px;
       justify-content: space-between;
+      height: 52px;
     }
     input {
       height: 100% !important;
@@ -28,6 +30,13 @@
     }
     .search-input {
       min-width: 38%;
+      background-color: $white;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      @include respond-to(desktop) {
+        min-height: unset;
+      }
       input {
         width: 100%;
         background-image: url("/assets/images/accomodation.svg");
@@ -46,6 +55,10 @@
       min-width: 25%;
       background-color: $white;
       display: flex;
+      min-height: 52px;
+      @include respond-to(desktop) {
+        min-height: unset;
+      }
       svg {
         position: relative;
         left: 0;
@@ -61,6 +74,12 @@
       min-width: 25%;
       background-color: $white;
       position: relative;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      @include respond-to(desktop) {
+        min-height: unset;
+      }
       &:hover {
         box-shadow: 0 0 0 1px #d59c00 inset;
       }
@@ -77,15 +96,14 @@
         position: relative;
         .arrows {
           background-image: url("/assets/images/arrows.svg");
-          position: absolute; 
+          position: absolute;
           width: 20px;
           height: 20px;
-          right: 0; 
+          right: 0;
           background-repeat: no-repeat;
           background-position: 0px center;
         }
       }
-
     }
     .btn {
       height: 100%;
@@ -97,11 +115,16 @@
         color: $white;
         white-space: nowrap;
         padding: 5px 32px;
+        width: 100%;
+        min-height: 52px;
+        @include respond-to(desktop) {
+          width: auto;
+          min-height: unset;
+        }
         &:hover {
           background-color: $ctaBlueHover;
         }
       }
-     
     }
   }
 }
