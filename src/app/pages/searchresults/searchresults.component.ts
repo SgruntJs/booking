@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { filter, map, Observable, switchMap, toArray } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { filter, Observable, switchMap, toArray } from 'rxjs';
 import { Hotel } from 'src/app/model/hotel.model';
 import { HotelsService } from 'src/app/services/hotels/hotels.service';
 

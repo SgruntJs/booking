@@ -1,15 +1,14 @@
 @import "../../../assets/common/styles.scss";
 :host {
-    width: 100%;
+  width: 100%;
 }
 .searchlist {
-    @include respond-to(desktop) {
-        width: 100%;
-      }
+  @include respond-to(desktop) {
+    width: 100%;
+  }
   .heading {
     display: flex;
     justify-content: space-between;
-
 
     &-left {
       h1 {
@@ -17,7 +16,25 @@
         line-height: 32px;
       }
     }
+
     &-right {
+      background-image: url(../../../assets/images/map.png);
+      border-radius: var(--bui_border_radius_200);
+      cursor: pointer;
+      display: inline;
+      height: 72px;
+      position: relative;
+      width: 160px;
+      .btn {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+        height: auto;
+        padding: 10px 9px;
+        font-size: 14px;
+      }
     }
   }
 }
