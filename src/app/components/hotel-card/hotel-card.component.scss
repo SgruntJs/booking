@@ -1,0 +1,91 @@
+@import "../../../assets/common/styles.scss";
+.hotel-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  border: 1px solid $borderAltGrey;
+  margin: 16px 0;
+  &-body {
+    display: flex;
+    flex-direction: row;
+    .hotel-card-left {
+      img {
+        @include respond-to(desktop) {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+    }
+    .hotel-card-right {
+      padding: 0 0 0 16px;
+      width: 100%;
+      .hotel-info-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .hotel-info-top-left {
+          display: flex;
+          flex-direction: column;
+          .top-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: center;
+            .hotel-name {
+              color: $ctaBlue;
+              font-size: 20px;
+              font-weight: 700;
+              cursor: pointer;
+              &:hover {
+                color: $darkText;
+              }
+            }
+          }
+        }
+        .hotel-info-top-right {
+          .top-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: center;
+            .hotel-top-right-vote {
+              display: flex;
+              flex-direction: column;
+              text-align: right;
+              .small {
+                font-size: 12px;
+                color: $darkBlue;
+              }
+            }
+            .hotel-top-right-badge {
+              background-color: $blue;
+              color: $white;
+              height: 32px;
+              width: 32px;
+              align-items: center;
+              display: flex;
+              justify-content: center;
+              border-radius: 6px 6px 6px 0;
+            }
+            .hotel-position {
+                color: $ctaBlue;
+                font-size: 14px;
+                font-weight: 700;
+                width: 100%;
+                text-align: right;
+                margin-top: 5px;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}

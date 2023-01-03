@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchresultsComponent } from './pages/searchresults/searchresults.component';
 import { HotelListComponent } from './components/hotel-list/hotel-list.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     GuestBoxComponent,
     SearchresultsComponent,
     HotelListComponent,
-    SidebarComponent
+    SidebarComponent,
+    HotelCardComponent
   ],
   imports: [
     BrowserModule,
