@@ -53,6 +53,15 @@
         &:hover {
           box-shadow: 0 0 0 1px #d59c00 inset;
         }
+        .cities-suggested-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          .secondary-location {
+            color: $darkBlue;
+          }
+        }
       }
       input::placeholder {
         color: $darkText;

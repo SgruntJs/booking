@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { City } from 'src/app/model/city.model';
+import { CitiesService } from 'src/app/services/cities/cities.service';
 
 @Component({
   selector: 'app-searchbar',
@@ -18,15 +21,10 @@ export class SearchbarComponent implements AfterViewInit {
 
   filteredCountries!: any[];
 
-  cities = [
-    { name: 'Bologna', code: 'AF' },
-    { name: 'Milano', code: 'AX' },
-    { name: 'Roma', code: 'AL' },
-    { name: 'Seattle', code: 'DZ' },
-    { name: 'Sanremo', code: 'AS' },
-  ];
+  cities: City[] = [];
+ 
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute, private citySrv: CitiesService) {}
 
   ngOnInit() {
     this.minDate = new Date();
@@ -37,6 +35,10 @@ export class SearchbarComponent implements AfterViewInit {
       children: new FormControl('', []),
       rooms: new FormControl('', [Validators.required]),
     });
+
+    this.citySrv.getAllCities().subscribe( res => {
+      this.cities = res;
+    })
   }
 
   onSubmit() {
