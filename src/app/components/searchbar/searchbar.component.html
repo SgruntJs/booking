@@ -3,12 +3,17 @@
     <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
       <div class="search-form-wrapper">
         <div class="search-input">
-          <input
-            type="text"
+        
+          <p-autoComplete
             formControlName="where"
-            placeholder="Dove vuoi andare?"
-          />
+            [suggestions]="filteredCountries"
+            (completeMethod)="filterCountry($event)"
+            field="name"
+            [minLength]="1"
+            placeholder = "Dove vuoi andare?"
+          ></p-autoComplete>
         </div>
+
         <div class="search-calendar">
           <svg
             aria-hidden="true"
@@ -36,15 +41,30 @@
         </div>
         <div class="search-people">
           <div class="label" (click)="showGuestBox()">
-            <input type="text" formControlName="adults" class="hidden" [(ngModel)]="numberAdults"/>
-            <input type="text" formControlName="children" class="hidden" [(ngModel)]="numberChildren"/>
-            <input type="text" formControlName="rooms" class="hidden" [(ngModel)]="numberRooms"/>
+            <input
+              type="text"
+              formControlName="adults"
+              class="hidden"
+              [(ngModel)]="numberAdults"
+            />
+            <input
+              type="text"
+              formControlName="children"
+              class="hidden"
+              [(ngModel)]="numberChildren"
+            />
+            <input
+              type="text"
+              formControlName="rooms"
+              class="hidden"
+              [(ngModel)]="numberRooms"
+            />
             {{ numberAdults }}
             {{ numberAdults === 1 ? "adulto" : "adulti" }} &bull;
             {{ numberChildren }}
             {{ numberChildren === 1 ? "bambino" : "bambini" }} &bull;
-            {{ numberRooms }} 
-            {{ numberRooms === 1 ? 'camera':'camere' }}
+            {{ numberRooms }}
+            {{ numberRooms === 1 ? "camera" : "camere" }}
             <div class="arrows"></div>
           </div>
           <ng-container *ngIf="show">
@@ -56,7 +76,9 @@
           </ng-container>
         </div>
         <div class="search-button">
-          <button class="btn btn-search" [disabled]="!searchForm.valid">Cerca</button>
+          <button class="btn btn-search" [disabled]="!searchForm.valid">
+            Cerca
+          </button>
         </div>
       </div>
     </form>

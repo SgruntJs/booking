@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import {ReactiveFormsModule} from "@angular/forms"; 
+import {FormsModule, ReactiveFormsModule} from "@angular/forms"; 
 
 import {ButtonModule} from 'primeng/button';
 import {TooltipModule} from 'primeng/tooltip';
@@ -23,6 +23,7 @@ import { SearchresultsComponent } from './pages/searchresults/searchresults.comp
 import { HotelListComponent } from './components/hotel-list/hotel-list.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,9 @@ import { HotelCardComponent } from './components/hotel-card/hotel-card.component
     BrowserAnimationsModule,
     ReactiveFormsModule,
     CalendarModule,
-    HttpClientModule
+    HttpClientModule,
+    AutoCompleteModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

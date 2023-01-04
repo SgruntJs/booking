@@ -44,7 +44,7 @@
       @include respond-to(desktop) {
         min-height: unset;
       }
-      input {
+      p-autocomplete {
         width: 100%;
         background-image: url("/assets/images/accomodation.svg");
         padding-left: 50px;

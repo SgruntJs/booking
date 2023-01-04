@@ -64,6 +64,28 @@ button {
       }
     }
   }
+  
+}
+.search-input {
+  p-autocomplete {
+    flex: 1 1 auto;
+    display: inline-flex;
+  }
+  .p-autocomplete {
+    width: 100%;
+    .p-inputtext {
+      width: 100%;
+      height: 42px;
+      border: none;
+      font-size: 14px;
+      margin-top: 1px;
+      background-color: transparent;
+      &:enabled:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 

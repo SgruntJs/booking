@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss'],
 })
-export class SearchbarComponent {
+export class SearchbarComponent implements AfterViewInit {
   rangeDates!: Date[];
   minDate!: Date;
   searchForm!: FormGroup;
@@ -15,6 +15,16 @@ export class SearchbarComponent {
   numberAdults = 2;
   numberChildren = 0;
   numberRooms = 1;
+
+  filteredCountries!: any[];
+
+  cities = [
+    { name: 'Bologna', code: 'AF' },
+    { name: 'Milano', code: 'AX' },
+    { name: 'Roma', code: 'AL' },
+    { name: 'Seattle', code: 'DZ' },
+    { name: 'Sanremo', code: 'AS' },
+  ];
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -31,7 +41,7 @@ export class SearchbarComponent {
 
   onSubmit() {
     console.log('search', this.searchForm.value);
-    const where = this.searchForm.value.where;
+    const where = this.searchForm.value.where.name;
     const guest = this.searchForm.value.adults;
     this.router.navigateByUrl(`/searchresults?where=${where}&guests=${guest}`);
   }
@@ -39,7 +49,6 @@ export class SearchbarComponent {
   showGuestBox() {
     this.show = !this.show;
   }
-
 
   updateAdults(num: number) {
     this.numberAdults = num;
@@ -49,10 +58,27 @@ export class SearchbarComponent {
     this.numberChildren = num;
   }
 
-  updateRooms(num: number){
+  updateRooms(num: number) {
     this.numberRooms = num;
   }
 
+  ngAfterViewInit() {}
 
+  suggest(e: Event) {
+    console.log((<HTMLInputElement>e.target).value);
+  }
 
+  filterCountry(event: any) {
+    //in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
+    let filtered: any[] = [];
+    let query = event.query;
+    for (let i = 0; i < this.cities.length; i++) {
+      let country = this.cities[i];
+      if (country.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
+        filtered.push(country);
+      }
+    }
+
+    this.filteredCountries = filtered;
+  }
 }
