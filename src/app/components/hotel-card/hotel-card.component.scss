@@ -72,6 +72,11 @@ $fontsize-small: 12px;
             transition: 0.3s ease-in-out all;
           }
         }
+        &.added {
+          svg {
+            fill: $red;
+          }
+        }
       }
     }
     .hotel-card-right {
