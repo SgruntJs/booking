@@ -12,7 +12,7 @@
     height: 40px;
     border-radius: 50%;
     font-size: 20px;
-  };
+  }
   .map-filters {
     width: 250px;
     background-color: $white;
@@ -30,15 +30,47 @@
     right: 0;
     bottom: 0;
     .map-frame {
-    
       height: 100%;
     }
     #map {
       height: 100%;
     }
   }
+
 }
-
-
-
-
+.hotel-marker {
+  width: 28px;
+  height: 34px;
+  position: relative;
+  pointer-events: none;
+  &__pin {
+    width: 28px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  &__icon {
+    width: 8px;
+    height: 8px;
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: 50%;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .hotel-marker__icon--heart {
+    display: none;
+  }
+  .hotel-marker__shape {
+    fill: #003580;
+    stroke: $white;
+    stroke-width: 1px;
+    pointer-events: none;
+  }
+}
