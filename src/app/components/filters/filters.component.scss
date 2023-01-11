@@ -1,0 +1,32 @@
+@import "../../../assets/common/styles.scss";
+.map-filters-left {
+    background: #f9f9f9;
+    padding: 8px;
+    hr {
+        background-color: $borderAltGrey;
+        border: 0;
+        height: 1px;
+    }
+    &-sidebar {
+        background: $white;
+        border: 1px solid $borderAltGrey;
+        border-radius: 2px;
+        
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            border-bottom: 1px solid $borderAltGrey; 
+            padding: 8px;
+        }
+        h3 {
+            font-size: 14px;
+        }
+        .map-filters-left-row {
+            padding: 8px;
+            label {
+                font-size: 13px;
+                margin-left: 8px;
+            }
+        }
+    }
+}

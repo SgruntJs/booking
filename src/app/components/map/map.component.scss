@@ -1,0 +1,44 @@
+@import "../../../assets/common/styles.scss";
+.map-wrapper {
+  display: flex;
+  .btn-close {
+    position: absolute;
+    color: $black;
+    z-index: 10000;
+    background: $borderAltGrey;
+    right: -15px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+  };
+  .map-filters {
+    width: 250px;
+    background-color: $white;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 24px rgb(0 0 0 / 15%);
+    border-right: 1px solid #c3c3c3;
+  }
+  .map-container {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    right: 0;
+    bottom: 0;
+    .map-frame {
+    
+      height: 100%;
+    }
+    #map {
+      height: 100%;
+    }
+  }
+}
+
+
+
+

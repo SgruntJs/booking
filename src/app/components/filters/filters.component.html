@@ -1,0 +1,40 @@
+<div class="map-filters-left">
+  <div class="map-filters-left-sidebar">
+    <h2>Filtra per:</h2>
+    <div class="map-filters-left-row">
+      <h3>Disponibilità</h3>
+      <div class="filters-field">
+        <input type="checkbox" />
+        <label>Mostra solo le strutture disponibili</label>
+      </div>
+    </div>
+    <hr />
+    <div class="map-filters-left-row">
+      <h3>Il tuo budget (a notte)</h3>
+      <div class="filters-field">
+        <p-inputSwitch
+          (onChange)="handleChange($event)"
+          formControlName="enabled"
+        ></p-inputSwitch>
+        <label for="budget">Imposta il tuo budget</label>
+      </div>
+      <div class="filters-field">
+        <input type="checkbox" />
+        <label for=""> € 0 - € 50</label>
+      </div>
+      <div class="filters-field">
+        <input type="checkbox" />
+        <label for=""> € 50 - € 100</label>
+      </div>
+      <div class="filters-field">
+        <input type="checkbox" />
+        <label for=""> € 50 - € 100</label>
+      </div>
+      <div class="filters-field">
+        <input type="checkbox" />
+        <label for=""> € 50 - € 100</label>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>

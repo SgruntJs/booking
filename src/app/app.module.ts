@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ButtonModule} from 'primeng/button';
 import {TooltipModule} from 'primeng/tooltip';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import {InputSwitchModule} from 'primeng/inputswitch';
 import {CalendarModule} from 'primeng/calendar';
 import { ChooseLanguageComponent } from './components/choose-language/choose-language.component';
 import { ChooseChangeComponent } from './components/choose-change/choose-change.component';
@@ -24,6 +25,8 @@ import { HotelListComponent } from './components/hotel-list/hotel-list.component
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import { MapComponent } from './components/map/map.component';
+import { FiltersComponent } from './components/filters/filters.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,9 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     SearchresultsComponent,
     HotelListComponent,
     SidebarComponent,
-    HotelCardComponent
+    HotelCardComponent,
+    MapComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,8 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     CalendarModule,
     HttpClientModule,
     AutoCompleteModule,
-    FormsModule
+    FormsModule,
+    InputSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent],

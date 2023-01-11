@@ -133,6 +133,17 @@ $fontsize-small: 12px;
                 fill: $yellow;
               }
             }
+            .hotel-rating {
+              .star {
+                height: 12px;
+                svg {
+                  fill: $yellow;
+                
+                  height: 100%;
+                  width: 12px;
+                }
+              }
+            }
             .hotel-zone,
             .hotel-map {
               font-size: $fontsize-small;
