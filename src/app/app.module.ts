@@ -20,10 +20,6 @@ import { HeroComponent } from './components/hero/hero.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { GuestBoxComponent } from './components/guest-box/guest-box.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchresultsComponent } from './pages/searchresults/searchresults.component';
-import { HotelListComponent } from './components/hotel-list/hotel-list.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import { MapComponent } from './components/map/map.component';
 import { FiltersComponent } from './components/filters/filters.component';
@@ -38,10 +34,6 @@ import { FiltersComponent } from './components/filters/filters.component';
     HeroComponent,
     SearchbarComponent,
     GuestBoxComponent,
-    SearchresultsComponent,
-    HotelListComponent,
-    SidebarComponent,
-    HotelCardComponent,
     MapComponent,
     FiltersComponent
   ],
