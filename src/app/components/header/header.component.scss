@@ -5,29 +5,54 @@
   .header-container {
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    padding-top: 20px;
+    @include respond-to('desktop') {
+      padding: 12px;
+    }
     .header-logo {
       margin-left: 11px;
     }
   }
   .header-right {
     ul {
-      display: flex;
-      list-style-type: none;
-      li {
-        .btn {
-          background-color: transparent;
-          color: white;
-          border: none;
-          cursor: pointer;
-          padding:12px;
-          font-size: 16px;
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+      display: none;
+    }
+    @include respond-to('desktop') {
+      ul {
+        display: flex;
+        list-style-type: none;
+        li {
+          .btn {
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding:12px;
+            font-size: 16px;
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
           }
         }
       }
     }
+    &--mobile {
+      ul {
+        display: flex;
+        color: $white;
+        list-style: none;
+        gap: 20px;
+        li {
+          i {
+            font-size: 20px;
+          }
+        }
+        @include respond-to('desktop') {
+          display: none;
+        }
+      }
+    }
+
  
   }
 }
