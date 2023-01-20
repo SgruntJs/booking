@@ -3,18 +3,28 @@
 $fontsize-small: 12px;
 
 .hotel-card {
-  padding: 16px;
+  padding: 4px;
   display: flex;
   flex-direction: column;
   border-radius: 2px;
   border: 1px solid $borderAltGrey;
   margin: 16px 0;
+  @include respond-to(desktop) {
+    padding: 16px;
+  }
   &-body {
     display: flex;
     flex-direction: row;
     .hotel-card-left {
       position: relative;
+      width: 33%;
+      @include respond-to(desktop) {
+        width: auto;
+      }
       img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
         @include respond-to(desktop) {
           width: 200px;
           height: 200px;
@@ -22,6 +32,7 @@ $fontsize-small: 12px;
         }
       }
       .hotel-ribbon {
+        display: none;
         position: absolute;
         background-color: $bgGreen;
         color: $white;
@@ -31,6 +42,9 @@ $fontsize-small: 12px;
         font-weight: bold;
         border-radius: 2px 2px 2px 0;
         padding: 4px 8px;
+        @include respond-to("desktop") {
+          display: block;
+        }
         &:before {
           border: 5px solid $bgGreen;
           border-bottom-color: transparent;
@@ -117,8 +131,11 @@ $fontsize-small: 12px;
       }
       .hotel-info-top {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+        @include respond-to("desktop") {
+          flex-direction: row;
+        }
         .hotel-info-top-left {
           display: flex;
           flex-direction: column;
@@ -138,7 +155,7 @@ $fontsize-small: 12px;
                 height: 12px;
                 svg {
                   fill: $yellow;
-                
+
                   height: 100%;
                   width: 12px;
                 }
@@ -159,10 +176,14 @@ $fontsize-small: 12px;
               font-size: $fontsize-small;
             }
             .hotel-name {
-              color: $ctaBlue;
-              font-size: 20px;
+              color: $darkText;
+              font-size: 14px;
               font-weight: 700;
               cursor: pointer;
+              @include respond-to("desktop") {
+                font-size: 20px;
+                color: $ctaBlue;
+              }
               &:hover {
                 color: $darkText;
               }
